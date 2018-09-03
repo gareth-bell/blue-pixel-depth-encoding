@@ -1,5 +1,8 @@
-I = imread('MLD-2-960x540.png');
+imPath = '.\Reference Demo Content\Reference Demo Content\1440\'
+fName = '1440-BMW 7-Series-Comfort-SLD.png'
+I = imread([imPath,fName]);
 Iout = convertBlueLSV(I);
+imwrite(Iout,['.\',fName,'converted.png']);
 
 %% Show control
 figure(1); imshow(I);
